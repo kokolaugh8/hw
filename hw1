@@ -32,4 +32,3 @@ int main()
     cout << "在費式數列中位置 " << position << " 的數字為: " << fibon(position) << endl;
     return 0;
 }
-```
