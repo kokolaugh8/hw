@@ -1,17 +1,51 @@
-def power_of_2_recursive(n):
-    if n == 0:
-        return 1
-    else:
-        return 2 * power_of_2_recursive(n - 1)
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
-def power_of_2_iterative(n):
-    result = 1
-    for _ in range(n):
-        result *= 2
-    return result
+void gps(const std::vector<int>& elements, std::vector<int>& cp, std::vector<bool>& used) 
+{
+    if (cp.size() == elements.size()) 
+	{
+        for (size_t i = 0; i < cp.size(); ++i) 
+		{
+            std::cout << cp[i] << " ";
+        }
+        std::cout << std::endl;
+    } 
+	else 
+	{
+        for (size_t i = 0; i < elements.size(); ++i) 
+		{
+            if (!used[i]) 
+			{
+                used[i] = true;
+                cp.push_back(elements[i]);
+                gps(elements, cp, used);
+                used[i] = false;
+                cp.pop_back();
+            }
+        }
+    }
+}
 
-def power_of_2_bitwise(n):
-    return 1 << n
+int main() 
+{
+    std::vector<int> elements_to_permute;
+    elements_to_permute.push_back(1);
+    elements_to_permute.push_back(2);
+    elements_to_permute.push_back(3);
 
-def power_of_2_exponent(n):
-    return 2 ** n
+    std::vector<int> cp;
+    std::vector<bool> used(elements_to_permute.size(), false);
+
+    gps(elements_to_permute, cp, used);
+
+    return 0;
+}
+//以下是輸出
+//1 2 3
+//1 3 2
+//2 1 3
+//2 3 1
+//3 1 2
+//3 2 1
