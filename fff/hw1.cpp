@@ -1,3 +1,4 @@
+//全部原創
 #include <iostream>
 
 using namespace std;
