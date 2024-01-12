@@ -1,4 +1,4 @@
-//參考同學的，有看懂
+##部分參考同學的，有看懂
 
 def power_of_2_recursive(n):
     if n == 0:
