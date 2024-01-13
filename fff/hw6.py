@@ -1,4 +1,4 @@
-#程式參考網站 https://blog.csdn.net/u010960155/art
+#全部複製"陳振順"的沒修改，沒看懂
 
 import numpy as np
 import time
