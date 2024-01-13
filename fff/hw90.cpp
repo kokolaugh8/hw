@@ -1,3 +1,5 @@
+//原創
+
 #include <iostream>
 #include <cmath>
 
