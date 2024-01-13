@@ -1,4 +1,4 @@
-#程式參考網站 https://blog.csdn.net/u010960155/article/details/113776715 ，有稍作修改並已理解程式邏輯與梯度下降概念
+#程式參考網站 https://blog.csdn.net/u010960155/art
 
 import numpy as np
 import time
