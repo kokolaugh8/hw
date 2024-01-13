@@ -1,4 +1,4 @@
-#參考老師hillClimbing範例，有使用ChatGPT輔助
+#全部複製"陳振順"的沒修改，有跟他討論過，有看懂
 import random, copy
 
 def neighbor(f, p, h=0.01):
